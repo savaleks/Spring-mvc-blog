@@ -12,22 +12,24 @@
 
 <body>
 	<header th:fragment="body">
-		<a href="index.html" th:href="@{/}"><img alt="logo"
-			src="../static/img/site-logo.png" th:src="@{/img/site-logo.png}" /></a> <a
-			href="index.html" th:href="@{/}">Home</a> <a href="users/login.html"
-			th:href="@{/users/login}">Login</a> <a href="users/register.html"
-			th:href="@{/users/register}">Register</a> <a href="posts/index.html"
-			th:href="@{/posts}">Posts</a> <a href="posts/create.html"
-			th:href="@{/posts/create}">Create Post</a> <a href="users/index.html"
-			th:href="@{/users}">Users</a>
+			<a href="index.html" th:href="@{/}"><img alt="logo"
+				src="../static/img/site-logo.png" th:src="@{/img/site-logo.png}" /></a>
+			<a href="index.html" th:href="@{/}">Home</a> <a
+				href="users/login.html" th:href="@{/users/login}">Login</a> <a
+				href="users/register.html" th:href="@{/users/register}">Register</a>
+			<a href="posts/index.html" th:href="@{/posts}">Posts</a> <a
+				href="posts/create.html" th:href="@{/posts/create}">Create Post</a>
+			<a href="users/index.html" th:href="@{/users}">Users</a>
 
-		<div id="logged-in-info">
-			<span>Hello, <b>(user)</b></span>
-			<form th:action="@{/users/logout}" method="post">
-				<input type="submit" value="Logout" />
-			</form>
-		</div>
+			<div id="logged-in-info">
+				<span>Hello, <b>(user)</b></span>
+				<form th:action="@{/users/logout}" method="post">
+					<input type="submit" value="Logout" />
+				</form>
+			</div>
 	</header>
+
 </body>
-	<footer th:fragment="footer"> &copy;Spring MVC Blog System, 2019 </footer>
+<footer th:fragment="footer"> &copy;Spring MVC Blog System,
+	2019 </footer>
 </html>
