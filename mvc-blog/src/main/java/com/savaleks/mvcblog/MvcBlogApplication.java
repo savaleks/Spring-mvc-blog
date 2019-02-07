@@ -9,6 +9,7 @@ public class MvcBlogApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MvcBlogApplication.class, args);
 	}
+	
 
 }
 
