@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="template :: head">
+<title>Home</title>
+</head>
+
+<body>
+	<header th:replace="template :: body" />
+
+	<div class="container">
+		<h2>Hello, <span th:utext="${username}"></span> this is the home page.</h2>
+		<a th:href="@{/logout}">Sign out</a>
+	</div>
+
+	<footer th:replace="template :: footer" />
+</body>
+</html>

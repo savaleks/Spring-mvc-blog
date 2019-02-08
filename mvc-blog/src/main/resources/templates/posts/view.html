@@ -7,9 +7,9 @@
 
 <body>
 	<header th:replace="template :: body" />
-	<main id="posts">
-			<article>
-				<h2 class="title" th:text="${post.title}">Post Title</h2>
+ 	<main id="posts">
+ 			<article>
+				<h2 class="title" th:text="${post.title}"></h2>
 				<div class="date">
 					<i>Posted on</i>
 					<span th:text="${#dates.format(post.date, 'dd-MM-yyyy')}">22-May-2019</span>

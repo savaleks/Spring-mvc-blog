@@ -15,12 +15,12 @@ public class PostServiceImpl implements PostService {
 	
 	private List<Post> posts = new ArrayList<Post>() {{
 		add(new Post(1,"First Post", "<p>Line #1.</p><p>Line #2</p>", null));
-		add(new Post(2,"Second Post", "Sercond post content:"
-				+ "<ul><li>line 1</li><li>Line 2</li></p>", 
-				new User(10, "ton22", "Petras Petraitis")));
-		add(new Post(3,"Third Post", "<p>Third post content:</p>"
-				+ "<ul><li>line 1</li><li>Line 2</li></p>", 
-				new User(10, "bollo", null)));
+//		add(new Post(2,"Second Post", "Sercond post content:"
+//				+ "<ul><li>line 1</li><li>Line 2</li></p>", 
+//				new User(10, "ton22", "Petras Petraitis")));
+//		add(new Post(3,"Third Post", "<p>Third post content:</p>"
+//				+ "<ul><li>line 1</li><li>Line 2</li></p>", 
+//				new User(10, "bollo", null)));
 		add(new Post(4,"Forth Post", "<p>Not interesting post</p>", null));
 		add(new Post(5,"Fifth Post", "<p>Just posting</p>", null));
 		add(new Post(6,"Sixth Post", "<p>Another interesting post</p>", null));

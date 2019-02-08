@@ -5,6 +5,8 @@
 <meta charset="UTF-8" />
 <link rel="stylesheet" href="../static/css/style.css"
 	th:href="@{/css/style.css}" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <script src="../static/js/jquery-3.1.0.min.js"
 	th:src="@{/js/jquery-3.1.0.min.js}"></script>
 <script src="../static/js/my-scripts.js" th:src="@{/js/my-scripts.js}"></script>
@@ -12,21 +14,21 @@
 
 <body>
 	<header th:fragment="body">
-			<a href="index.html" th:href="@{/}"><img alt="logo"
-				src="../static/img/site-logo.png" th:src="@{/img/site-logo.png}" /></a>
-			<a href="index.html" th:href="@{/}">Home</a> <a
-				href="users/login.html" th:href="@{/users/login}">Login</a> <a
-				href="users/register.html" th:href="@{/users/register}">Register</a>
-			<a href="posts/index.html" th:href="@{/posts}">Posts</a> <a
-				href="posts/create.html" th:href="@{/posts/create}">Create Post</a>
-			<a href="users/index.html" th:href="@{/users}">Users</a>
+		<a href="index.html" th:href="@{/}"><img alt="logo"
+			src="../static/img/site-logo.png" th:src="@{/img/site-logo.png}" /></a>
+		<a href="index.html" th:href="@{/}">Home</a> <a
+			href="users/login.html" th:href="@{/login}">Login</a> <a
+			href="users/signup.html" th:href="@{/signup}">Register</a> <a
+			href="index.html" th:href="@{/posts}">Posts</a> <a
+			href="posts/create_post.html" th:href="@{/create_post}">Create Post</a> <a
+			href="posts/users.html" th:href="@{/users}">Users</a>
 
-			<div id="logged-in-info">
-				<span>Hello, <b>(user)</b></span>
-				<form th:action="@{/users/logout}" method="post">
-					<input type="submit" value="Logout" />
-				</form>
-			</div>
+		<div id="logged-in-info">
+			<span>Hello, </span>
+			<form th:action="@{/users/logout}" method="post">
+				<input type="submit" value="Logout" />
+			</form>
+		</div>
 	</header>
 
 </body>

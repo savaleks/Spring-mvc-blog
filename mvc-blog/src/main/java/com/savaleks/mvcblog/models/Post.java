@@ -2,11 +2,26 @@ package com.savaleks.mvcblog.models;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="posts")
 public class Post {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String title;
+	@Lob
 	private String body;
+	@ManyToOne(optional = false, fetch = FetchType.LAZY)
 	private User author;
 	private Date date = new Date();
 	
