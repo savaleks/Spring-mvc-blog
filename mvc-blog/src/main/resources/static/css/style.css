@@ -15,11 +15,14 @@ body>footer {
 	padding: 5px;
 	margin: 10px 0;
 	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 #logged-in-info {
 	float: right;
-	margin-top: 18px;
+	margin-top: 10px;
 }
 
 #logged-in-info form {
@@ -75,6 +78,17 @@ ul#messages li.error {
 	font-style: italic;
 }
 
+.contact-form{ margin-top:15px;}
+.contact-form .textarea{ min-height:220px; resize:none;}
+.form-control{ box-shadow:none; border-color:#eee; height:49px;}
+.form-control:focus{ box-shadow:none; border-color:#00b09c;}
+.form-control-feedback{ line-height:50px;}
+.main-btn{ background:#00b09c; border-color:#00b09c; color:#fff;}
+.main-btn:hover{ background:#00a491;color:#fff;}
+.form-control-feedback {
+line-height: 50px;
+top: 0px;
+}
 
 
 

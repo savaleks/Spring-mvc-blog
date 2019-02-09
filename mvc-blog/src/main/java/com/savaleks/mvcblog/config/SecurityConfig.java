@@ -53,10 +53,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.and().logout()
 			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 			.logoutSuccessUrl("/")
-			.and().rememberMe()
-			.tokenRepository(persistentTokenRepository())
-			.tokenValiditySeconds(60*60)
-			.and().exceptionHandling().accessDeniedPage("/access_denied");
+			.permitAll()
+			.and().logout().permitAll()
+			.and()
+			.exceptionHandling()
+			.accessDeniedPage("/access-denied");
 
 	}
 	
@@ -68,3 +69,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return db;
 	}
 }
+
+//last piece of code in configure with token validation timer
+//.and().rememberMe()
+//.tokenRepository(persistentTokenRepository())
+//.tokenValiditySeconds(60*60)
+//.and().exceptionHandling().accessDeniedPage("/access_denied");

@@ -22,7 +22,7 @@ import com.savaleks.mvcblog.services.UserService;
 
 @Controller
 public class LoginController {
-
+	
 	@Autowired
 	private UserService userService;
 	
@@ -31,6 +31,7 @@ public class LoginController {
 	
 	@GetMapping("/")
 	public ModelAndView login(Model theModel) {
+		
 		List<Post> latesFifthPost = postService.findLatest5();
 		theModel.addAttribute("latestFifth", latesFifthPost);
 		
@@ -101,18 +102,6 @@ public class LoginController {
 		return model;
 	}
 	
-	@GetMapping("/posts")
-	public String viewPost(Model model) {
-		
-		return "posts/view";
-	}
-	
-	@GetMapping("/create_post")
-	public ModelAndView createPost() {
-		ModelAndView model = new ModelAndView();
-		model.setViewName("posts/create_post");
-		return model;
-	}
 	
 	@GetMapping("/users")
 	public ModelAndView usersPost() {

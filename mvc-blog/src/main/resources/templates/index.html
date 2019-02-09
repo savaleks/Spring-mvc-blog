@@ -7,13 +7,12 @@
 
 <body>
 	<header th:replace="template :: body" />
-	
+	<div th:text="${username}">Username!</div>
 	<aside>
 		<h2>Recent Posts</h2>
 		<a href="#" th:each="p : ${latestFifth}" th:text="${p.title}"
 		th:href="@{/posts/view/{id}/(id=${p.id})}">Work begins on HTML</a>
 	</aside>
-	
 		<main id="posts">
 			<article th:each="p : ${latestThree}">
 				<h2 class="title" th:text="${p.title}">Post Title</h2>
@@ -22,8 +21,8 @@
 					<span th:text="${#dates.format(p.date, 'dd-MM-yyyy')}">22-May-2019</span>
 					<span th:if="${p.author}" th:remove="tag">
 						<i>by</i>
-						<span th:text="${p.author.fullName != null?
-								p.author.fullName : p.author.username}">Alex Smith</span>
+						<span th:text="${p.author.lastName != null?
+								p.author.lastName : p.author.username}">Alex Smith</span>
 					</span>
 				</div>
 				<p class="content" th:utext="${p.body}">Post content</p>

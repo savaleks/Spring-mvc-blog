@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 
 import com.savaleks.mvcblog.models.Post;
 
-@Repository("postRepository")
-public interface PostRepository extends JpaRepository<Post, Long>{
+@Repository
+public interface PostRepository extends JpaRepository<Post, Integer>{
 
 	@Query("SELECT p FROM Post p LEFT JOIN FETCH p.author ORDER BY p.date DESC")
 	List<Post> findLatest5Posts(Pageable pageable);

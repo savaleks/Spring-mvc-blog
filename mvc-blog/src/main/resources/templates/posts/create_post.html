@@ -2,12 +2,41 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="template :: head">
-	<title th:text="${post.title}">Create Post</title>
+<title th:text="${post.title}">Create Post</title>
 </head>
 
 <body>
 	<header th:replace="template :: body" />
-
+	<br>
+	<div class="container">
+		<div class="row">
+			<form role="form" id="contact-form" class="contact-form col-lg-12"
+				th:action="@{/create_post}" method="post">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<input type="text" id="title" class="form-control" name="title"
+								autocomplete="off" placeholder="Title">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<textarea class="form-control textarea" rows="3" name="body"
+								id="body" placeholder="Text area..."></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<button type="submit" class="btn btn-success main-btn pull-right">Send
+							a Post</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 
 	<footer th:replace="template :: footer" />
 </body>
